@@ -1,0 +1,41 @@
+.example-container {
+    height: 400px;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+    font-size: 1em;
+  }
+  th{
+    font-weight: bold;
+    background: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    padding:  3px 9px !important;
+  }
+  td{
+      border: 1px solid #f0f0f0;
+      padding:  3px 9px !important;
+  }
+  .container{
+      width: 95%;
+      margin: 10px auto;
+      clear: both;
+      display: flex;
+      justify-content: space-between;
+      height: 90vh;
+  }
+  .container .tree-area{
+      width: 100%;
+  }
+  .container .mat-table-area{
+      width: 70%;
+  }
+  .control_wrapper {
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+}
+
+
