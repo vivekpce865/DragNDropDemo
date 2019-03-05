@@ -2,30 +2,7 @@
 <div class="container">
   <div class="tree-area">
       <app-drag-drop-sync></app-drag-drop-sync>
-    <!-- <ej-treeview id="dragdrop" [fields]='field' cdkDropList
-    #todoList="cdkDropList"
-    [cdkDropListData]="dataSource"
-    [cdkDropListConnectedTo]="[doneList]" 
-    (cdkDropListDropped)="dropTable($event)" (nodeDragging)='nodeDrag($event)' (nodeDragStop)="onDragStop($event)"
-            [allowDragAndDrop]='allowDragAndDrop' [allowDragAndDropAcrossControl]='allowDragAndDropAcrossControl' 
-            [allowDropSibling]='allowDropSibling' [allowDropChild]='allowDropChild' [allowEditing]='allowEditing'>
-    </ej-treeview> -->
-
-    <div class="tree-list" >
-        <ejs-treeview id="checkbox" #treevalidate [fields]='field'  [allowEditing]='allowEditing' (nodeClicked)="nodeCheck($event)"  (cdkDropListDropped)="dropTable($event)"
-         [allowDragAndDrop]='allowDragAndDrop'  (templateRefresh)="onTemplateRefresh($event)" style="
-         width: 50%;
-         float: left;"></ejs-treeview>
-    </div>
-    <!-- <div class="tree-list">
-        <ejs-treeview id="tree2" [fields]='field1' (cdkDropListDropped)="dropTable($event)" style="
-        width: 50%;
-        float: right;" [allowDragAndDrop]='allowDragAndDrop' (nodeDragStop)="onDragStop($event)" ></ejs-treeview>
-    </div> -->
-    <!-- <ejs-grid id="draggable" [dataSource]='data' [allowRowDragAndDrop]='true' [rowDropSettings]='rowDropOptions' [selectionSettings]='selectionOptions'  (nodeDragStop)="onDragStop($event)" >
-  
-        </ejs-grid> -->
-
+      
         <div class="mat-table-area">
             <div class="table-responsive">
               <table mat-table #table [dataSource]="dataSource" cdkDropList

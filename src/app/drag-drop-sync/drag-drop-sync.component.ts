@@ -1,12 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {CdkDragDrop, moveItemInArray, transferArrayItem, CdkDragHandle} from '@angular/cdk/drag-drop';
-import {MatTable, MatTableDataSource} from '@angular/material/table';
-import { EJComponents } from 'ej-angular2';
-import { TreeView, DragAndDropEventArgs, NodeEditEventArgs } from '@syncfusion/ej2-navigations';
-import { ListView } from '@syncfusion/ej2-lists';
-import { closest } from '@syncfusion/ej2-base';
-import { TreeViewComponent, NodeKeyPressEventArgs, NodeClickEventArgs } from '@syncfusion/ej2-angular-navigations';
-import { RowDropSettingsModel, SelectionSettingsModel } from '@syncfusion/ej2-angular-grids';
+import { TreeViewComponent, NodeKeyPressEventArgs, NodeClickEventArgs, NodeSelectEventArgs } from '@syncfusion/ej2-angular-navigations';
 @Component({
   selector: 'app-drag-drop-sync',
   templateUrl: './drag-drop-sync.component.html',
@@ -78,35 +71,16 @@ public allowDragAndDropAcrossControl:boolean = true;
 public allowDropSibling: boolean = true;
 public allowDropChild: boolean = true;
 public allowEditing: boolean = true;
-public showCheckBox: boolean = true;
-//set the checknodes to the TreeView
-//public checkedNodes: string[] = ['2','6'];
 public nodeCheck(args: NodeKeyPressEventArgs | NodeClickEventArgs): void {
-  let checkedNode: any = [args.node.innerText];
-  debugger
-  // for (var i = 0; i < this.field.dataSource.length; i++) {
-  // if(this.field.dataSource[i].name == checkedNode){
-  //   this.field.dataSource[i].countries.push(checkedNode);
-  // };
-  // }
-  this.getNodeDetails='';
-  this.getNodeDetails = this.treevalidate.getNodeData(args.node);
-  if (this.getNodeDetails.isChecked == 'true') {
-    this.treevalidate.uncheckAll(checkedNode);
+  if (this.getNodeDetails) {
+    $('.e-node-focus').removeClass('e-active');
+    this.getNodeDetails ='';
+    
   } else {
-    this.treevalidate.checkAll(checkedNode);
-    this.getNodeDetails='';
+    // this.treevalidate.checkAll(checkedNode);
+    this.getNodeDetails = this.treevalidate['getNodeData'](args.node);
   }
-  console.log(checkedNode)
-  // if (args.event.target.classList.contains('e-fullrow') || args.event.key == "Enter") {
-  //   this.getNodeDetails = this.treevalidate.getNodeData(args.node);
-  //   if (this.getNodeDetails.isChecked == 'true') {
-  //     this.treevalidate.uncheckAll(checkedNode);
-  //     this.getNodeDetails='';
-  //   } else {
-  //     this.treevalidate.checkAll(checkedNode);
-  //   }
-  // }
+  
 }
 }
 
