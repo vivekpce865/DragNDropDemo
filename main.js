@@ -10577,7 +10577,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <div class=\"tree-list\" >\n        <ejs-treeview id=\"checkbox\" #treevalidate [fields]='field' [allowEditing]='allowEditing' (nodeClicked)=\"nodeCheck($event)\" (keyPress)=\"nodeCheck($event)\" (cdkDropListDropped)=\"dropTable($event)\" \n         [allowDragAndDrop]='allowDragAndDrop'  (templateRefresh)=\"onTemplateRefresh($event)\"></ejs-treeview>\n    </div>\n\n\n\n\n\n<!-- <div class=\"example-container\">\n  <h2>To do</h2>\n\n  <div\n    cdkDropList\n    #todoList=\"cdkDropList\"\n    [cdkDropListData]=\"todo\"\n    [cdkDropListConnectedTo]=\"[doneList]\"\n    class=\"example-list\"\n    (cdkDropListDropped)=\"drop($event)\">\n    <div class=\"example-box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div>\n  </div>\n</div>\n\n<div class=\"example-container\">\n  <h2>Done</h2>\n\n  <div\n    cdkDropList\n    #doneList=\"cdkDropList\"\n    [cdkDropListData]=\"done\"\n    [cdkDropListConnectedTo]=\"[todoList]\"\n    class=\"example-list\"\n    (cdkDropListDropped)=\"drop($event)\">\n    <div class=\"example-box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div>\n  </div>\n</div> -->"
+module.exports = "\n    <div class=\"tree-list\" >\n        <ejs-treeview id=\"checkbox\" #treevalidate [fields]='field' [allowEditing]='allowEditing' (nodeClicked)=\"nodeCheck($event)\" (keyPress)=\"nodeCheck($event)\" (cdkDropListDropped)=\"dropTable($event)\" \n         [allowDragAndDrop]='allowDragAndDrop'></ejs-treeview>\n    </div>"
 
 /***/ }),
 
@@ -10709,7 +10709,7 @@ module.exports = ".example-container {\r\n    height: 400px;\r\n    overflow: au
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\">\n  <div class=\"tree-area\">\n      <app-drag-drop-sync></app-drag-drop-sync>\n    <!-- <ej-treeview id=\"dragdrop\" [fields]='field' cdkDropList\n    #todoList=\"cdkDropList\"\n    [cdkDropListData]=\"dataSource\"\n    [cdkDropListConnectedTo]=\"[doneList]\" \n    (cdkDropListDropped)=\"dropTable($event)\" (nodeDragging)='nodeDrag($event)' (nodeDragStop)=\"onDragStop($event)\"\n            [allowDragAndDrop]='allowDragAndDrop' [allowDragAndDropAcrossControl]='allowDragAndDropAcrossControl' \n            [allowDropSibling]='allowDropSibling' [allowDropChild]='allowDropChild' [allowEditing]='allowEditing' [showCheckBox]='showCheckBox'>\n    </ej-treeview> -->\n<!-- \n    <div class=\"tree-list\" >\n        <ejs-treeview id=\"checkbox\" #treevalidate [fields]='field'  [allowEditing]='allowEditing' (nodeClicked)=\"nodeCheck($event)\"  (cdkDropListDropped)=\"dropTable($event)\"\n         [allowDragAndDrop]='allowDragAndDrop'  (templateRefresh)=\"onTemplateRefresh($event)\" style=\"\n         width: 50%;\n         float: left;\"></ejs-treeview>\n    </div> -->\n    <!-- <div class=\"tree-list\">\n        <ejs-treeview id=\"tree2\" [fields]='field1' (cdkDropListDropped)=\"dropTable($event)\" style=\"\n        width: 50%;\n        float: right;\" [allowDragAndDrop]='allowDragAndDrop' (nodeDragStop)=\"onDragStop($event)\" ></ejs-treeview>\n    </div> -->\n    <!-- <ejs-grid id=\"draggable\" [dataSource]='data' [allowRowDragAndDrop]='true' [rowDropSettings]='rowDropOptions' [selectionSettings]='selectionOptions'  (nodeDragStop)=\"onDragStop($event)\" >\n  \n        </ejs-grid> -->\n\n        <div class=\"mat-table-area\">\n            <div class=\"table-responsive\">\n              <table mat-table #table [dataSource]=\"dataSource\" cdkDropList\n              [cdkDropListData]=\"dataSource\"\n               (nodeDragStop)=\"onDragStop($event)\" (cdkDropListDropped)=\"dropTable($event)\">\n            \n                <!-- Position Column -->\n                <ng-container matColumnDef=\"position\">\n                  <th mat-header-cell *matHeaderCellDef> No. </th>\n                  <td mat-cell *matCellDef=\"let element\"> {{element.code}} </td>\n                </ng-container>\n            \n                <!-- Name Column -->\n                <ng-container matColumnDef=\"name\">\n                  <th mat-header-cell *matHeaderCellDef> Name </th>\n                  <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n                </ng-container>\n            \n                <!-- Weight Column -->\n                <ng-container matColumnDef=\"weight\">\n                  <th mat-header-cell *matHeaderCellDef> Weight </th>\n                  <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n                </ng-container>\n            \n                <!-- Symbol Column -->\n                <ng-container matColumnDef=\"symbol\">\n                  <th mat-header-cell *matHeaderCellDef> Symbol </th>\n                  <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n                </ng-container>\n            \n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></tr>\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" cdkDrag [cdkDragData]=\"row\"></tr>\n              </table>\n            </div>\n        \n          </div> <!-- end of mat-table-area -->\n  </div>\n\n</div>"
+module.exports = "\n<div class=\"container\">\n  <div class=\"tree-area\">\n      <app-drag-drop-sync></app-drag-drop-sync>\n      \n        <div class=\"mat-table-area\">\n            <div class=\"table-responsive\">\n              <table mat-table #table [dataSource]=\"dataSource\" cdkDropList\n              [cdkDropListData]=\"dataSource\"\n               (nodeDragStop)=\"onDragStop($event)\" (cdkDropListDropped)=\"dropTable($event)\">\n            \n                <!-- Position Column -->\n                <ng-container matColumnDef=\"position\">\n                  <th mat-header-cell *matHeaderCellDef> No. </th>\n                  <td mat-cell *matCellDef=\"let element\"> {{element.code}} </td>\n                </ng-container>\n            \n                <!-- Name Column -->\n                <ng-container matColumnDef=\"name\">\n                  <th mat-header-cell *matHeaderCellDef> Name </th>\n                  <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n                </ng-container>\n            \n                <!-- Weight Column -->\n                <ng-container matColumnDef=\"weight\">\n                  <th mat-header-cell *matHeaderCellDef> Weight </th>\n                  <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n                </ng-container>\n            \n                <!-- Symbol Column -->\n                <ng-container matColumnDef=\"symbol\">\n                  <th mat-header-cell *matHeaderCellDef> Symbol </th>\n                  <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n                </ng-container>\n            \n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></tr>\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" cdkDrag [cdkDragData]=\"row\"></tr>\n              </table>\n            </div>\n        \n          </div> <!-- end of mat-table-area -->\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -10725,11 +10725,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DragDropComponent", function() { return DragDropComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
-/* harmony import */ var _syncfusion_ej2_angular_navigations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @syncfusion/ej2-angular-navigations */ "./node_modules/@syncfusion/ej2-angular-navigations/index.js");
-/* harmony import */ var _drag_drop_sync_drag_drop_sync_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../drag-drop-sync/drag-drop-sync.component */ "./src/app/drag-drop-sync/drag-drop-sync.component.ts");
-
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
+/* harmony import */ var _syncfusion_ej2_angular_navigations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @syncfusion/ej2-angular-navigations */ "./node_modules/@syncfusion/ej2-angular-navigations/index.js");
+/* harmony import */ var _drag_drop_sync_drag_drop_sync_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../drag-drop-sync/drag-drop-sync.component */ "./src/app/drag-drop-sync/drag-drop-sync.component.ts");
 
 
 
@@ -10749,71 +10747,15 @@ var DragDropComponent = /** @class */ (function () {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = ELEMENT_DATA;
         this.getNodeDetails = '';
-        this.deSelectNode = '';
-        // public continents:Object[] = [
-        //     {
-        //     code: 'AF', name: 'Africa', countries: [
-        //         { code: 'NGA', name: 'Nigeria' },
-        //         { code: 'EGY', name: 'Egypt' },
-        //         { code: 'ZAF', name: 'South Africa' }
-        //     ]
-        // },
-        // {
-        //     code: 'AS', name: 'Asia', expanded: true, countries: [
-        //         { code: 'CHN', name: 'China' },
-        //         { code: 'IND', name: 'India'},
-        //         { code: 'JPN', name: 'Japan' }
-        //     ]
-        // },
-        // {
-        //     code: 'EU', name: 'Europe', countries: [
-        //         { code: 'DNK', name: 'Denmark' },
-        //         { code: 'FIN', name: 'Finland' },
-        //         { code: 'AUT', name: 'Austria' }
-        //     ]
-        // },
-        // {
-        //     code: 'NA', name: 'North America', countries: [
-        //         { code: 'USA', name: 'United States of America' },
-        //         { code: 'CUB', name: 'Cuba' },
-        //         { code: 'MEX', name: 'Mexico' }
-        //     ]
-        // },
-        // {
-        //     code: 'SA', name: 'South America', countries: [
-        //         { code: 'BRA', name: 'Brazil' },
-        //         { code: 'COL', name: 'Colombia' },
-        //         { code: 'ARG', name: 'Argentina' }
-        //     ]
-        // },
-        // {
-        //     code: 'OC', name: 'Oceania', countries: [
-        //         { code: 'AUS', name: 'Australia' },
-        //         { code: 'NZL', name: 'New Zealand' },
-        //         { code: 'WSM', name: 'Samoa' }
-        //     ]
-        // },
-        // {
-        //     code: 'AN', name: 'Antarctica', countries: [
-        //         { code: 'BVT', name: 'Bouvet Island' },
-        //         { code: 'ATF', name: 'French Southern Lands' }
-        //     ]
-        // }
-        // ];
         this.allowMultiSelection = true;
         this.allowDragAndDrop = true;
         this.allowDragAndDropAcrossControl = true;
         this.allowDropSibling = true;
         this.allowDropChild = true;
         this.allowEditing = true;
-        this.showCheckBox = true;
     }
     DragDropComponent.prototype.dropTable = function (event) {
         var _this = this;
-        var prevIndex = this.dataSource.findIndex(function (d) { return d === event.item.data; });
-        Object(_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__["moveItemInArray"])(this.dataSource, prevIndex, event.currentIndex);
-        this.table.renderRows();
-        this.TreeViewData;
         var newField = { code: event.item.data.code, name: event.item.data.name };
         if (this.TreeViewData.getNodeDetails) {
             if (this.TreeViewData.getNodeDetails.parentID) {
@@ -10841,50 +10783,31 @@ var DragDropComponent = /** @class */ (function () {
             alert('Please select node ');
         }
         console.log(this.TreeViewData.continents);
-        // if(this.TreeViewData.getNodeDetails){
-        //   this.continents.map(v => {
-        //     if(v.code === this.TreeViewData.getNodeDetails.id && v.name === this.TreeViewData.getNodeDetails.text){
-        //               v.countries.push(newField)
-        //               $('.e-node-focus').removeClass('e-active');
-        //               this.TreeViewData.getNodeDetails ='';
-        //   } 
-        // })
-        // }else{
-        //   alert('Please select node ')
-        // }
     };
-    //set the checknodes to the TreeView
-    //public checkedNodes: string[] = ['2','6'];
     DragDropComponent.prototype.nodeCheck = function (args) {
-        var checkedNode = [args.node.innerText];
-        debugger;
-        // if(this.getNodeDetails == ''){
-        //   this.getNodeDetails = this.treevalidate.getNodeData(args.node);
-        // }
         console.log(this.getNodeDetails);
         if (this.getNodeDetails) {
             $('.e-node-focus').removeClass('e-active');
             this.getNodeDetails = '';
         }
         else {
-            this.treevalidate.checkAll(checkedNode);
             this.getNodeDetails = this.treevalidate['getNodeData'](args.node);
         }
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('table'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_table__WEBPACK_IMPORTED_MODULE_3__["MatTable"])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTable"])
     ], DragDropComponent.prototype, "table", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('treeview'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _syncfusion_ej2_angular_navigations__WEBPACK_IMPORTED_MODULE_4__["TreeViewComponent"])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _syncfusion_ej2_angular_navigations__WEBPACK_IMPORTED_MODULE_3__["TreeViewComponent"])
     ], DragDropComponent.prototype, "tree", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('treevalidate'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _syncfusion_ej2_angular_navigations__WEBPACK_IMPORTED_MODULE_4__["TreeViewComponent"])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _syncfusion_ej2_angular_navigations__WEBPACK_IMPORTED_MODULE_3__["TreeViewComponent"])
     ], DragDropComponent.prototype, "treevalidate", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_drag_drop_sync_drag_drop_sync_component__WEBPACK_IMPORTED_MODULE_5__["DragDropSyncComponent"]),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_drag_drop_sync_drag_drop_sync_component__WEBPACK_IMPORTED_MODULE_4__["DragDropSyncComponent"]),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
     ], DragDropComponent.prototype, "TreeViewData", void 0);
     DragDropComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
