@@ -7,7 +7,7 @@
             <div class="table-responsive">
               <table mat-table #table [dataSource]="dataSource" cdkDropList
               [cdkDropListData]="dataSource"
-               (nodeDragStop)="onDragStop($event)" (cdkDropListDropped)="dropTable($event)">
+               (cdkDropListDropped)="dropTable($event)">
             
                 <!-- Position Column -->
                 <ng-container matColumnDef="position">
